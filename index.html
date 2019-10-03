@@ -1,0 +1,82 @@
+<html>
+<head>
+     <link rel="stylesheet" href="style.css">
+ <h1 class="title">
+ Meaningful Data
+    </h1>   
+    </head>
+<body>
+       <h2>
+    How did we do A1?
+    </h2>
+    <pre>
+    var getGrade = function(quiz)
+ {
+    return quiz.grade;
+ }
+    
+var answer=getGrade; 
+    </pre>
+    <p>
+    In A1 we needed to get the function to extract the grade from the quiz, so we asked function to return the grade of the quiz if it was given a penguin. 
+    </p>
+       <h2>
+    How did we do A2?
+    </h2>
+    <pre>
+    d3.mean(classroom[0].quizes);
+var answer= d3.mean(classroom[0].quizes, getGrade);
+    </pre>
+    <p>
+   In A2 we used the function get grade, which was made in A1. We accessed the d3 library to calculate the mean, as the formula for the mean is saved in the d3 library. Moreover, we gave the get grade function a penguin and it got us all the grades of that specific penguin and the mean function calculated the mean for us, for the grades of that penguin. 
+     </p>
+       <h2>
+    How did we do A3?
+    </h2>
+    <pre>
+    var getmean= function(penguin)
+  {
+      return d3.mean(penguin.quizes, getGrade);
+  }
+var answer=getmean(classroom[1]);
+    </pre>
+    <p>
+   In A3, we created a new function which is supposed to give us the mean, when we provide that function with a penguin. Therefore, the parameter for the function are penguins. However, in the function we ask the function to return the mean for the quiz grades for a penguin. In addition, we integrate the getGrade function within the getMean function so that the get grade function gets us the grades for the quizzes whereas this function calculates the mean of the grades. 
+    </p>
+       <h2>
+    How did we do A4?
+    </h2>
+    <pre>
+    classroom.map(getmean);
+var bro=classroom.map(getmean);
+    </pre>
+    <p>
+   In A4, we use the map function to create an array for all the classroom’s mean. The map function transforms one array to another array, but the function is doing the actual transformation, whereas the map function takes care of the logistics. I name my array ‘bro’, which will be used in A5 to get the mean of all the quizzes. We give the map function all the classroom and use the getmean function to make an array for the mean all the classrooms. 
+    </p>
+       <h2>
+    How did we do A5?
+    </h2>
+    <pre>
+     d3.mean(bro)
+var answer=d3.mean(bro);
+    </pre>
+    <p>
+    In A5, we use the array that we made in A4 for the mean of all the classroom and use the mean function to calculate the mean for that array.  
+    </p>
+    <h2>
+    How did we do A6?
+    </h2>
+    <pre>
+     var getimage= function(penguin)
+    {
+        var pic={};
+        pic.ag= penguin.picture;
+        return pic
+    }
+var answer=getimage(classroom[0]);
+    </pre>
+    <p>
+    In A6, we create another function to get the image of the penguin as an object. We create an empty object and push the pic into the object by using the push function for an object. At the end we ask it to return the object that we created. The parameter for this is a penguin, and once we give it a penguin the function finds the pic itself and presents it as an object. 
+    </p>
+</body>
+</html>
